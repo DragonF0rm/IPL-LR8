@@ -1,2 +1,14 @@
-<h1>SimonHypothesis#output</h1>
-<p>Find me in app/views/simon_hypothesis/output.html.erb</p>
+<p><%= @result %></p>
+<table border="1">
+  <% i=1 %>
+  <% if @input_is_ok %>
+    <% @correct.each do |row| %>
+      <tr>
+        <th><%= i %></th>
+        <% i += 1 %>
+        <th><%= row %></th>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+</p>
